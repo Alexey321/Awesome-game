@@ -3,7 +3,8 @@
 #include "Heart.h"
 #include "MyPlayer.h"
 #include "GameField.h"
-//#include "Particles/ParticleSystem.h"
+//#include "Prickle.h"
+#include "Particles/ParticleSystem.h"
 
 #include "Components/StaticMeshComponent.h"
 #include "UObject/ConstructorHelpers.h"
@@ -55,7 +56,13 @@ void AHeart::OnHit(
 	const FHitResult&		Hit
 )
 {
-	// TODO: handle hits
+	if (OtherActor->ActorHasTag("Prickle")) // if Prickle hits Heart
+	{ // then destroy Heart
+		GameField->Hearts.RemoveSingle(this);
+		SpawnSprikes();
+		Destroy();
+		//UE_LOG(LogTemp, Warning, TEXT("APrickle hit AHeart!!!"))
+	}
 }
 
 void AHeart::SpawnSprikes() const

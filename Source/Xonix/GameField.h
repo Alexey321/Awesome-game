@@ -31,19 +31,19 @@ public:
 	TArray<FVector2D> Tail;
 
 	TArray<class ACommonBall*> CommonBalls;
-	
+
 	TArray<class AHeart*> Hearts;
 
 	TSubclassOf<class ACommonBall> CommonBall_BP;
-	
 
-	int32 BallsCount = 2; // initial balls count
+	int32 BallsCount = 2;
 
 
 	float PercentageOfFieldToWin = 0.55; // [0 - 1]
 
 	float PercentageOfConquered = 0; // [0 - 100]
 
+	float HightOfBallAboveBottomOftheField = 3.9; // TODO: remove this magic number(hight above the bottom of the field)
 
 private:
 	class UStaticMeshComponent* GameFieldMesh;
@@ -53,11 +53,20 @@ private:
 	// Filles game field with cubes
 	void GenerateGameField();
 
+
+	UFUNCTION()
+	void SpawnPrickle();
+	TSubclassOf<class APrickle> Prickle_BP;
+	FTimerHandle PrickleSpawnTimerHandle;
+
 	UFUNCTION()
 	void SpawnHeart();
 	TSubclassOf<class AHeart> Heart_BP;
 	FTimerHandle HeartSpawnTimerHandle;
-	
+
+	float PrickleSpawnRate = 1.3;
 	float HeartSpawnRate = 7.5;
+
+
 
 };

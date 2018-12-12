@@ -3,6 +3,7 @@
 #include "GameField.h"
 #include "Cube.h"
 #include "CommonBall.h"
+#include "Prickle.h"
 #include "Heart.h"
 #include "MyPlayer.h"
 
@@ -27,6 +28,9 @@ AGameField::AGameField()
 	static ConstructorHelpers::FObjectFinder<UClass> Found1(TEXT("Class'/Game/Blueprints/CommonBall_BP.CommonBall_BP_C'"));
 	CommonBall_BP = Found1.Object;
 	
+	static ConstructorHelpers::FObjectFinder<UClass> Found2(TEXT("Class'/Game/Blueprints/Prickle_BP.Prickle_BP_C'"));
+	Prickle_BP = Found2.Object;
+
 	static ConstructorHelpers::FObjectFinder<UClass> Found3(TEXT("Class'/Game/Blueprints/Heart_BP.Heart_BP_C'"));
 	Heart_BP = Found3.Object;
 
@@ -115,8 +119,46 @@ void AGameField::GenerateGameField()
 			}
 		}
 		//----------
+		GetWorldTimerManager().SetTimer(PrickleSpawnTimerHandle, this, &AGameField::SpawnPrickle, PrickleSpawnRate, true, 0);
 		GetWorldTimerManager().SetTimer(HeartSpawnTimerHandle, this, &AGameField::SpawnHeart, HeartSpawnRate, true, 0);
 	}
+}
+
+void AGameField::SpawnPrickle()
+{
+	UWorld* const World = GetWorld();
+	if (World)
+	{
+		FVector GameFieldCenter; // TODO: Endure into a separate function p2
+		FVector GameFieldBoxExtent;
+		GetActorBounds(false, OUT GameFieldCenter, OUT GameFieldBoxExtent);
+		float Height = 350;
+		GameFieldBoxExtent.X *= 0.75;
+		GameFieldBoxExtent.Y *= 0.75;
+		GameFieldBoxExtent.Z = Height;
+
+		FVector SpawnLocation = UKismetMathLibrary::RandomPointInBoundingBox(GameFieldCenter, GameFieldBoxExtent);
+
+		FRotator SpawnRotation;
+		SpawnRotation.Yaw = FMath::FRand() * 360.0f;
+		SpawnRotation.Pitch = FMath::FRand() * 360.0f;
+		SpawnRotation.Roll = FMath::FRand() * 360.0f;
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = Instigator;
+
+		APrickle* Prickle = World->SpawnActor<APrickle>(Prickle_BP, SpawnLocation, SpawnRotation, SpawnParams);
+		//UE_LOG(LogTemp, Warning, TEXT("%s"), *Prickle->GetActorLocation().ToString())
+		if (Prickle->GetActorLocation().Z < Height) // correct the spawn Z location
+		{
+			FVector NewLoc = Prickle->GetActorLocation();
+			NewLoc.Z = 350;
+			Prickle->SetActorLocation(NewLoc);
+		}
+		//UE_LOG(LogTemp, Warning, TEXT("%s"), *Prickle->GetActorLocation().ToString())
+	}
+
 }
 
 void AGameField::SpawnHeart()
@@ -153,13 +195,3 @@ void AGameField::SpawnHeart()
 	}
 
 }
-
-
-
-
-
-
-
-
-
-

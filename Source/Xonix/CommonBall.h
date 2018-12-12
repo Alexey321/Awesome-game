@@ -28,7 +28,7 @@ private:
 	class UStaticMeshComponent* CommonBallMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hitting", meta = (AllowPrivateAccess = "true"))
-	float Velocity = 125; 
+	float Velocity = 125;
 
 	UFUNCTION(BlueprintCallable, Category = "Hitting", meta = (AllowPrivateAccess = "true"))
 	void Energize(

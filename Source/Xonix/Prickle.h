@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Heart.generated.h"
+#include "Prickle.generated.h"
 
 UCLASS()
-class XONIX_API AHeart : public AActor
+class XONIX_API APrickle : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AHeart();
+	APrickle();
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,11 +23,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SpawnSprikes() const;
-
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (AllowPrivateAccess = "true"))
-	class UStaticMeshComponent* HeartMesh;
+	class UStaticMeshComponent* PrickleMesh;
 	
 	UFUNCTION(BlueprintCallable, Category = "Hitting", meta = (AllowPrivateAccess = "true"))
 	void OnHit(
@@ -38,9 +36,10 @@ private:
 		const FHitResult&		Hit
 	);
 
-	class AMyPlayer* MyPlayer;
+
 	class AGameField* GameField;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawning", meta = (AllowPrivateAccess = "true"))
-	class UParticleSystem* ParticleSystem; // spawn sprikes when heart destroyed
+	class AMyPlayer* MyPlayer;
+
 };
+
