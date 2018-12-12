@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// © 2019 Cul_Team All Rights Reserved
 
 #pragma once
 

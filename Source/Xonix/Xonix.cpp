@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// © 2018 Alexey Storcheus All Rights Reserved
 
 #include "Xonix.h"
 #include "Modules/ModuleManager.h"
