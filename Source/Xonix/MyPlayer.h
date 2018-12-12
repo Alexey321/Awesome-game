@@ -23,6 +23,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	TArray<TArray<int32>> Flags;
+
 	void SetPos(const FVector2D& Pos);
 
 	FVector2D Pos = { 10, 0 };
@@ -56,6 +58,7 @@ private:
 	float Speed = 0.2f; // TODO : adjust speed
 
 	void Conquer();
+	void _Conquer(int32 y, int32 x);
 
 
 	TArray<TArray<int32>> round;
@@ -65,6 +68,16 @@ private:
 	TArray<TArray<int32>> res;
 	
 	int32 AmountOfCells = 0;
+
+	class ACameraActor* Camera;
+
+	float DistanceFromCameraX;
+	float DistanceFromCameraY;
+	float DistanceFromCameraZ;
+
+	// Limit of direction changes to change the direction of sight
+	int32 LoDCtCtDoS = 15;
+	int32 i_LoDCtCtDoS = 0;
 
 
 };

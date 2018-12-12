@@ -31,8 +31,11 @@ public:
 	TArray<FVector2D> Tail;
 
 	TArray<class ACommonBall*> CommonBalls;
+	
+	TArray<class AHeart*> Hearts;
 
 	TSubclassOf<class ACommonBall> CommonBall_BP;
+	
 
 	int32 BallsCount = 2; // initial balls count
 
@@ -50,6 +53,11 @@ private:
 	// Filles game field with cubes
 	void GenerateGameField();
 
-
+	UFUNCTION()
+	void SpawnHeart();
+	TSubclassOf<class AHeart> Heart_BP;
+	FTimerHandle HeartSpawnTimerHandle;
+	
+	float HeartSpawnRate = 7.5;
 
 };

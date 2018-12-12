@@ -1,4 +1,4 @@
-// © 2018 Alexey Storcheus All Rights Reserved
+// © 2019 Cul_Team All Rights Reserved
 
 #include "Xonix.h"
 #include "Modules/ModuleManager.h"
