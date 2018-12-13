@@ -130,7 +130,45 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 ![alt text](screenshots/prototype.jpg "")
 
-## Процесс гри
+### Процесс розробки
+
+## Blueprint рiвня
+
+![alt text](screenshots/LevelBlueprint.jpg "")
+
+## Матерiал сяючою частинки
+
+![alt text](screenshots/single_particle_shader.jpg "")
+
+## Налаштування випромiнювача частинок
+
+![alt text](screenshots/emitter.jpg "")
+
+## Iгрове поле в режимі розробки
+
+![alt text](screenshots/game_field_editor.jpg "")
+
+
+## Налаштування худа
+
+Худ буде накладуватися пост рендером на гру
+
+![alt text](screenshots/hud_preferences.jpg "")
+
+## c++ класи які були успадковані в движку
+
+![alt text](screenshots/cpp_classes_in_editor.jpg "")
+
+## Всі моделі з матеріалами які використовуються в движку
+
+![alt text](screenshots/game_models.jpg "")
+
+
+## Всі blueprints які використовуються в грі
+
+![alt text](screenshots/all_blueprints.jpg "")
+
+### Процесс гри
 
 ![alt text](screenshots/game1.jpg "")
 
@@ -140,7 +178,7 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 ![alt text](screenshots/game4.jpg "")
 
-## Захист программи
+### Захист программи
 
 В данному станi вся логiка гри доступна користувачевi
 
