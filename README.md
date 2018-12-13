@@ -83,11 +83,11 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 Графiчно це можна представити у виглядi такої моделi:
  
-![alt text](screenshots/object diagram.jpg "")
+![alt text](screenshots/objectDiagram.jpg "")
 
 ## Дiаграма послiдовностей
- 
-![alt text](screenshots/diagram uml.jpg "")
+
+![alt text](screenshots/objectDiagram.jpg "")
 
 ## Дiаграми станiв
  
