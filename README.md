@@ -24,13 +24,13 @@
 Звуком супроводжуеться пройдений рiвень, програш, або пiднiмання бонусiв
 
 ### Поле 
-![alt text]("screenshots/field.jpg")
+![alt text](screenshots/field.jpg "")
 
 Поле  вiдповiдає за генерацiю ворожих шарiв спочатку гри або пiсля переходу на наступний рiвень,також вiдповiдае за спавн колючок при зiткненнi з якими вiднiмаеться життя та сердечок при зiткненнi з якими додаеться життя. Розрахунок колiзiй
 
 ### Колючка
 
-![alt text]("screenshots/coluchka.jpg")
+![alt text](screenshots/coluchka.jpg "")
 
 Колючка: тривалiсть життя в довiльному дiапазонi (3 - 5) секунд. При зiткненнi вiднiмає життя гравцю.
 
@@ -42,7 +42,7 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 ### Гравець
 
-![alt text]("screenshots/player.jpg")
+![alt text](screenshots/player.jpg "")
 
 Гравець його подiї, спавн лiнiї при русi.
 
@@ -52,7 +52,7 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 ### Kулька 
 
-![alt text]("screenshots/ball.jpg")
+![alt text](screenshots/ball.jpg "")
 
 Ворожа кулька заважає гравцю захопити поле. При зiткненнi з гравцем або лiнiею гравець втрачає життя та становиться в позицiю з якої почалася гра теперiшньго рiвня(середина ближнього ребра поля).
 
@@ -75,7 +75,7 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 **Графiчно це можна сприймати у виглядi такої моделi:**
  
-![alt text]("screenshots/diagram.jpg")
+![alt text](screenshots/diagram.jpg "")
 
 ## Дiаграма об'єктiв та класiв
 
@@ -83,21 +83,21 @@ Cердечко: тривалiсть життя в довiльному дiапа
 
 Графiчно це можна представити у виглядi такої моделi:
  
-![alt text]("screenshots/object diagram.jpg")
+![alt text](screenshots/object diagram.jpg "")
 
 ## Дiаграма послiдовностей
  
-![alt text]("screenshots/diagram uml.jpg")
+![alt text](screenshots/diagram uml.jpg "")
 
 ## Дiаграми станiв
  
-![alt text]("screenshots/dgst1.jpg")
+![alt text](screenshots/dgst1.jpg "")
  
-![alt text]("screenshots/dgst2.jpg")
+![alt text](screenshots/dgst2.jpg "")
 
 ## Вид классiв
 
-![alt text]("screenshots/class.png")
+![alt text](screenshots/class.png "")
 
 
 
