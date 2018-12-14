@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xonix2D", "Xonix2D\Xonix2D.vcxproj", "{D1E056B5-E351-4471-8ABC-631EA1FC4717}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Debug|x64.ActiveCfg = Debug|x64
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Debug|x64.Build.0 = Debug|x64
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Debug|x86.ActiveCfg = Debug|Win32
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Debug|x86.Build.0 = Debug|Win32
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Release|x64.ActiveCfg = Release|x64
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Release|x64.Build.0 = Release|x64
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Release|x86.ActiveCfg = Release|Win32
+		{D1E056B5-E351-4471-8ABC-631EA1FC4717}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A29942A-13B4-4368-8D15-06296AB6A6C7}
+	EndGlobalSection
+EndGlobal
